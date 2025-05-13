@@ -7,7 +7,6 @@
 **Automated threat intelligence** with AI-powered analysis and interactive visualization.  
 Scan IPs/domains/emails/files and map risks using **10+ security APIs** + **MITRE ATT&CK**.
 
-![Demo](https://via.placeholder.com/800x400.png?text=Scan+Visualization+%7C+Dark+Mode+UI) <!-- Add real screenshot -->
 
 ## 🚀 Features
 
@@ -16,7 +15,7 @@ Scan IPs/domains/emails/files and map risks using **10+ security APIs** + **MITR
 - 🤖 AI recommendations (Google Gemini)
 - 📁 Static file analysis (Mandiant Capa)
 - 📄 PDF reports (planned)
-- 🌑 Dark mode UI
+
 
 ## ⚙️ Tech Stack
 
