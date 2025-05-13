@@ -27,21 +27,21 @@ Scan IPs/domains/emails/files and map risks using **10+ security APIs** + **MITR
 ## 🛠️ Setup
 
 ```bash
-# 1. Clone & Install
+ Clone & Install
 git clone https://github.com/yourusername/ReconDart.git
 cd ReconDart
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 
-# 2. Configure .env
+ Configure .env
 echo "NUMVERIFY_API_KEY=your_key
 VITE_GEMINI_API_KEY=your_gemini_key
 VITE_BACKEND_URL=http://localhost:5000" > .env && cp .env FE/.env
 
-# 3. Install Frontend
+ Install Frontend
 cd FE && npm install
 
-##▶️ Usage
+▶️ Usage
 '''bash
  Start backend
 python src/main.py
