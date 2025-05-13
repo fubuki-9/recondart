@@ -40,3 +40,11 @@ VITE_BACKEND_URL=http://localhost:5000" > .env && cp .env FE/.env
 
 # 3. Install Frontend
 cd FE && npm install
+
+##▶️ Usage
+'''bash
+ Start backend
+python src/main.py
+
+ Start frontend (from /FE)
+npm run dev
