@@ -1,74 +1,43 @@
-# ReconDart: Cybersecurity Reconnaissance and Analysis Platform
+# 🔍 ReconDart: OSINT Cybersecurity Platform
 
-ReconDart is a web application designed to empower security analysts and organizations with comprehensive threat intelligence and reconnaissance capabilities. It automates the process of gathering, analyzing, and visualizing data from various open-source intelligence (OSINT) sources and threat feeds, allowing users to understand and visualize their digital security exposure across IP addresses, domains, emails, phone numbers, and usernames. The platform also includes static file analysis to identify potential malicious capabilities and leverages AI to provide actionable security recommendations.
-Set up the Backend:
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![React 18+](https://img.shields.io/badge/React-18%2B-61DAFB)](https://react.dev/)
 
-Navigate to the backend root directory (where src and requirements.txt are located).
+**Automated threat intelligence** with AI-powered analysis and interactive visualization.  
+Scan IPs/domains/emails/files and map risks using **10+ security APIs** + **MITRE ATT&CK**.
 
-Set up a Python virtual environment (recommended):
-Bash
+![Demo](https://via.placeholder.com/800x400.png?text=Scan+Visualization+%7C+Dark+Mode+UI) <!-- Add real screenshot -->
 
-python -m venv venv
-Activate the virtual environment:
-On macOS and Linux:
-Bash
+## 🚀 Features
 
-source venv/bin/activate
-On Windows:
-Bash
+- 🔍 Unified scans for IP/Domain/Email/Phone/File
+- 📊 Interactive attack graphs (ReactFlow)
+- 🤖 AI recommendations (Google Gemini)
+- 📁 Static file analysis (Mandiant Capa)
+- 📄 PDF reports (planned)
+- 🌑 Dark mode UI
 
-venv\Scripts\activate
-Install backend dependencies:
-Bash
+## ⚙️ Tech Stack
 
+**Frontend:**  
+![React](https://img.shields.io/badge/-React-20232A?logo=react) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript)  
+**Backend:**  
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python) ![Flask](https://img.shields.io/badge/-Flask-000000?logo=flask)
+
+## 🛠️ Setup
+
+```bash
+# 1. Clone & Install
+git clone https://github.com/yourusername/ReconDart.git
+cd ReconDart
+python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
-Create a .env file: In the backend root directory, create a file named .env.
-Add your API keys and configurations to .env: Obtain necessary API keys (see "API Keys" section below) and add them to the file.
-Code snippet
 
-# Backend .env file
-ipAPI_KEY=YOUR_IPAPI_KEY # Check if key is required for your use case based on ip-api.com tier
-onypheAPI_KEY=YOUR_ONYPHE_KEY # Obtain from Onyphe
-NUMVERIFY_API_KEY=YOUR_NUMVERIFY_KEY # Obtain from apilayer/NumVerify
-GROCLAKE_API_KEY=YOUR_GROCLAKE_KEY # Based on groclake usage in /chat endpoint
-GROCLAKE_ACCOUNT_ID=YOUR_GROCLAKE_ACCOUNT_ID # Based on groclake usage in /chat endpoint
+# 2. Configure .env
+echo "NUMVERIFY_API_KEY=your_key
+VITE_GEMINI_API_KEY=your_gemini_key
+VITE_BACKEND_URL=http://localhost:5000" > .env && cp .env FE/.env
 
-# Frontend will also use this in its .env for direct calls
-VITE_BACKEND_URL=http://localhost:5000
-VITE_GEMINI_API_KEY=YOUR_GEMINI_API_KEY # Obtain from Google AI Studio/Cloud
-3. Set up the Frontend:
-
-Navigate to the frontend directory (likely FE within the repository).
-
-Install frontend dependencies:
-Using npm:
-Bash
-
-npm install
-Using yarn:
-Bash
-
-yarn install
-Create a .env file: In the frontend directory (FE), create a file named .env.
-Add necessary environment variables to the frontend .env file:
-Code snippet
-
-# Frontend FE/.env file
-VITE_BACKEND_URL=http://localhost:5000 # Ensure this matches the backend server address
-VITE_GEMINI_API_KEY=YOUR_GEMINI_API_KEY # Your Google Gemini API key for frontend recommendations
-▶️ Running the Application
-Start the Flask Backend Server:
-Navigate to the backend root directory (where src/main.py is located) and run:
-
-Bash
-
-python src/main.py
-The backend should start and listen on http://localhost:5000.
-
-Start the Frontend Development Server:
-Navigate to the frontend directory (likely FE) and run:
-
-Using npm:
-Bash
-
-npm run dev
+# 3. Install Frontend
+cd FE && npm install
