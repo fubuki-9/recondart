@@ -1,0 +1,3 @@
+# ReconDart: Cybersecurity Reconnaissance and Analysis Platform
+
+ReconDart is a web application designed to empower security analysts and organizations with comprehensive threat intelligence and reconnaissance capabilities. It automates the process of gathering, analyzing, and visualizing data from various open-source intelligence (OSINT) sources and threat feeds, allowing users to understand and visualize their digital security exposure across IP addresses, domains, emails, phone numbers, and usernames. The platform also includes static file analysis to identify potential malicious capabilities and leverages AI to provide actionable security recommendations.
